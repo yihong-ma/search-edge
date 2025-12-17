@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="数字搜索工具 - 自动调用浏览器搜索数字">
+    <meta name="theme-color" content="#2196F3">
+    <title>数字搜索工具</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <!-- iOS Safari支持 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="数字搜索">
+</head>
+<body>
+    <div class="container">
+        <!-- 标题 -->
+        <h1 class="title">数字搜索工具</h1>
+
+        <!-- 起始数字输入框 -->
+        <div class="input-group">
+            <label for="startNumber">起始数字</label>
+            <input 
+                type="number" 
+                id="startNumber" 
+                class="input-field" 
+                value="1" 
+                placeholder="请输入起始数字"
+                min="0">
+        </div>
+
+        <!-- 结束数字输入框 -->
+        <div class="input-group">
+            <label for="endNumber">结束数字</label>
+            <input 
+                type="number" 
+                id="endNumber" 
+                class="input-field" 
+                value="10" 
+                placeholder="请输入结束数字"
+                min="0">
+        </div>
+
+        <!-- 间隔时间输入框 -->
+        <div class="input-group">
+            <label for="interval">间隔时间（秒）</label>
+            <input 
+                type="number" 
+                id="interval" 
+                class="input-field" 
+                value="2" 
+                placeholder="请输入间隔时间"
+                min="0.1"
+                step="0.1">
+        </div>
+
+        <!-- 按钮组 -->
+        <div class="button-group">
+            <button id="btnStart" class="btn btn-primary">开始搜索</button>
+            <button id="btnStop" class="btn btn-danger" disabled>停止搜索</button>
+        </div>
+
+        <!-- 状态显示 -->
+        <div class="status-box">
+            <div id="statusText" class="status-text">等待开始...</div>
+        </div>
+
+        <!-- 使用说明 -->
+        <div class="info-box">
+            <h3>使用说明</h3>
+            <ul>
+                <li>输入起始数字、结束数字和间隔时间</li>
+                <li>点击"开始搜索"按钮</li>
+                <li>应用会自动打开新标签页进行搜索</li>
+                <li>可以随时点击"停止搜索"按钮停止</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

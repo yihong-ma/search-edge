@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="数字搜索工具"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- 起始数字输入框 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="起始数字"
+        android:layout_marginBottom="16dp"
+        app:hintEnabled="true"
+        app:boxStrokeColor="#2196F3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etStartNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 结束数字输入框 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="结束数字"
+        android:layout_marginBottom="16dp"
+        app:hintEnabled="true"
+        app:boxStrokeColor="#2196F3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEndNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="10" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 间隔时间输入框 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="间隔时间（秒）"
+        android:layout_marginBottom="24dp"
+        app:hintEnabled="true"
+        app:boxStrokeColor="#2196F3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etInterval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="2" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 开始搜索按钮 -->
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开始搜索"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2196F3"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp" />
+
+    <!-- 停止搜索按钮 -->
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止搜索"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#F44336"
+        android:enabled="false"
+        android:padding="16dp" />
+
+    <!-- 状态显示 -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="等待开始..."
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:padding="16dp"
+        android:background="#E0E0E0" />
+
+</LinearLayout>
+
